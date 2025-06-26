@@ -50,7 +50,7 @@ export const BenefitsSection: React.FC = () => {
 
   return (
     <section className="self-center w-full max-w-[1120px] mt-[99px] max-md:max-w-full max-md:mt-10">
-      <div className="gap-5 flex max-md:flex-col max-md:items-stretch">
+      <div className="gap-5 flex max-md:flex-col max-md:items-stretch justify-center">
         <div className="w-[39%] max-md:w-full max-md:ml-0">
           <div className="flex flex-col relative aspect-[0.832] pt-10 pb-[222px] px-10 rounded-[0px_0px_0px_0px] max-md:mt-10 max-md:pb-[100px] max-md:px-5">
             <img
