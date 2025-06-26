@@ -40,12 +40,12 @@ export const LocationSection: React.FC = () => {
             />
           </div>
           
-          {/* Fernando de Noronha - Medium */}
+          {/* Florianópolis - Medium */}
           <div className="col-span-1 row-span-1">
             <LocationCard
-              name="Fernando de Noronha"
+              name="Florianópolis"
               properties="2 Propriedades"
-              imageUrl="https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?w=400&h=280&fit=crop"
+              imageUrl="https://images.unsplash.com/photo-1516306580123-e6e52b1b7b5f?w=400&h=280&fit=crop"
               className="h-full"
             />
           </div>
@@ -76,16 +76,6 @@ export const LocationSection: React.FC = () => {
               name="Balneário Camboriú"
               properties="2 Propriedades"
               imageUrl="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&h=280&fit=crop"
-              className="h-full"
-            />
-          </div>
-          
-          {/* Florianópolis - Tall */}
-          <div className="col-span-1 row-span-2">
-            <LocationCard
-              name="Florianópolis"
-              properties="2 Propriedades"
-              imageUrl="https://images.unsplash.com/photo-1516306580123-e6e52b1b7b5f?w=400&h=600&fit=crop"
               className="h-full"
             />
           </div>
