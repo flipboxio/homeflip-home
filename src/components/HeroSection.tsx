@@ -20,7 +20,7 @@ export const HeroSection: React.FC = () => {
           Encontre o Imóvel perfeito para seu estilo de vida!
         </h1>
         
-        <p className="text-white text-base font-normal leading-5 mt-8">
+        <p className="text-white text-base font-normal leading-5 mt-8 w-[467px]">
           Lorem ipsum dolor sit amet consectetur. Nec risus quis viverra
           libero tellus eget. Leo morbi faucibus mattis pharetra tellus velit
           ultricies duis rhoncus. Porttitor fermentum eu urna eget
