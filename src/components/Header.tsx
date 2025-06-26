@@ -1,20 +1,21 @@
+
 import React from 'react';
 
 export const Header: React.FC = () => {
   return (
-    <header className="w-full px-[72px] py-[35px] max-md:max-w-full max-md:px-5">
-      <nav className="flex w-full items-center gap-5 flex-wrap justify-between max-md:max-w-full">
-        <div className="self-stretch flex items-stretch gap-1">
-          <div className="flex w-[157px] items-center gap-2.5 h-full pt-1.5">
+    <header className="w-full px-[72px] py-[35px] max-md:max-w-full max-md:px-5 max-md:py-6">
+      <nav className="flex w-full items-center gap-5 flex-wrap justify-between max-md:flex-col max-md:gap-4 max-md:max-w-full">
+        <div className="self-stretch flex items-stretch gap-1 max-md:order-1">
+          <div className="flex w-[157px] items-center gap-2.5 h-full pt-1.5 max-md:w-[120px]">
             <img
               src="https://cdn.builder.io/api/v1/image/assets/040fe6f248e241579615f8e023273613/588ca80530d3bec06dda69c7fd03e3cc4bb06b4e?placeholderIfAbsent=true"
               alt="Company Logo"
-              className="aspect-[4.48] object-contain w-[157px] self-stretch my-auto"
+              className="aspect-[4.48] object-contain w-[157px] self-stretch my-auto max-md:w-[120px]"
             />
           </div>
         </div>
         
-        <div className="self-stretch flex items-center gap-6 text-base text-black font-medium my-auto">
+        <div className="self-stretch flex items-center gap-6 text-base text-black font-medium my-auto max-md:order-3 max-md:flex-wrap max-md:justify-center max-md:gap-4 max-md:text-sm">
           <a href="#" className="self-stretch gap-2.5 whitespace-nowrap my-auto hover:text-[#7065F0] transition-colors">
             Home
           </a>
@@ -29,21 +30,21 @@ export const Header: React.FC = () => {
           </a>
         </div>
         
-        <div className="self-stretch flex gap-6 text-base text-black font-medium my-auto">
-          <button className="flex items-center gap-2 whitespace-nowrap hover:text-[#7065F0] transition-colors">
+        <div className="self-stretch flex gap-6 text-base text-black font-medium my-auto max-md:order-2 max-md:flex-col max-md:gap-3 max-md:text-sm">
+          <button className="flex items-center gap-2 whitespace-nowrap hover:text-[#7065F0] transition-colors max-md:justify-center">
             <img
               src="https://cdn.builder.io/api/v1/image/assets/040fe6f248e241579615f8e023273613/2781467f260d3948127d5b381d6d68af509df5f9?placeholderIfAbsent=true"
               alt="User icon"
-              className="aspect-[1] object-contain w-6 self-stretch shrink-0 my-auto rounded-[31px]"
+              className="aspect-[1] object-contain w-6 self-stretch shrink-0 my-auto rounded-[31px] max-md:w-5"
             />
             <span className="self-stretch gap-2.5 my-auto">Login</span>
           </button>
           
-          <a href="tel:+5511999999999" className="flex items-center gap-2 hover:text-[#7065F0] transition-colors">
+          <a href="tel:+5511999999999" className="flex items-center gap-2 hover:text-[#7065F0] transition-colors max-md:justify-center">
             <img
               src="https://cdn.builder.io/api/v1/image/assets/040fe6f248e241579615f8e023273613/cb6116d39ca48572cd9b941082cd2232b29dc452?placeholderIfAbsent=true"
               alt="Phone icon"
-              className="aspect-[1] object-contain w-6 self-stretch shrink-0 my-auto"
+              className="aspect-[1] object-contain w-6 self-stretch shrink-0 my-auto max-md:w-5"
             />
             <span className="self-stretch gap-2.5 my-auto">(11) 9999-9999</span>
           </a>

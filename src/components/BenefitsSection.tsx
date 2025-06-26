@@ -8,17 +8,17 @@ interface BenefitCardProps {
 }
 
 const BenefitCard: React.FC<BenefitCardProps> = ({ icon, title, description }) => (
-  <article className="grow max-md:mt-6">
+  <article className="grow max-md:mt-6 max-md:w-full">
     <img
       src={icon}
       alt={`${title} icon`}
-      className="aspect-[1] object-contain w-16 rounded-[0px_0px_0px_0px]"
+      className="aspect-[1] object-contain w-16 rounded-[0px_0px_0px_0px] max-md:w-12"
     />
-    <div className="max-w-full w-[308px] mt-6">
-      <h3 className="text-[#000929] text-2xl font-bold tracking-[-0.24px]">
+    <div className="max-w-full w-[308px] mt-6 max-md:w-full">
+      <h3 className="text-[#000929] text-2xl font-bold tracking-[-0.24px] max-md:text-xl">
         {title}
       </h3>
-      <p className="text-[#4D5461] text-base font-normal leading-[26px] mt-4">
+      <p className="text-[#4D5461] text-base font-normal leading-[26px] mt-4 max-md:text-sm max-md:leading-6">
         {description}
       </p>
     </div>
@@ -50,33 +50,33 @@ export const BenefitsSection: React.FC = () => {
   ];
 
   return (
-    <section className="self-center w-full max-w-[1120px] mt-[99px] max-md:max-w-full max-md:mt-10">
+    <section className="self-center w-full max-w-[1120px] mt-[99px] max-md:max-w-full max-md:mt-10 max-md:px-5">
       <div className="gap-5 flex max-md:flex-col max-md:items-stretch justify-center items-center">
-        <div className="flex-1 max-w-md max-md:w-full max-md:ml-0">
-          <div className="flex flex-col relative aspect-[0.832] pt-10 pb-[222px] px-10 rounded-[0px_0px_0px_0px] max-md:mt-10 max-md:pb-[100px] max-md:px-5">
+        <div className="flex-1 max-w-md max-md:w-full max-md:ml-0 max-md:order-2">
+          <div className="flex flex-col relative aspect-[0.832] pt-10 pb-[222px] px-10 rounded-[0px_0px_0px_0px] max-md:mt-10 max-md:pb-[100px] max-md:px-5 max-md:aspect-auto max-md:min-h-[400px]">
             <img
               src="https://cdn.builder.io/api/v1/image/assets/040fe6f248e241579615f8e023273613/8bbd0d4f8b0b548794e5a9e33b79a359740eee75?placeholderIfAbsent=true"
               alt="Benefits background"
               className="absolute h-full w-full object-cover inset-0"
             />
             <div className="relative flex w-full flex-col items-stretch">
-              <div className="max-w-full w-[336px] text-[#100A55]">
-                <h2 className="text-[32px] font-bold leading-10 tracking-[-0.32px]">
+              <div className="max-w-full w-[336px] text-[#100A55] max-md:w-full max-md:text-center">
+                <h2 className="text-[32px] font-bold leading-10 tracking-[-0.32px] max-md:text-[28px] max-md:leading-8">
                   A nova maneira de encontrar seu novo lar
                 </h2>
-                <p className="text-base font-medium leading-[26px] opacity-70 mt-4">
+                <p className="text-base font-medium leading-[26px] opacity-70 mt-4 max-md:text-sm max-md:leading-6">
                   Encontre o lugar dos seus sonhos para morar entre mais de 10
                   mil imóveis listados.
                 </p>
               </div>
-              <button className="bg-[rgba(94,17,119,1)] gap-2 text-sm text-white font-bold text-center leading-[1.4] mt-6 px-4 py-2.5 rounded-lg hover:bg-[rgba(94,17,119,0.9)] transition-colors">
+              <button className="bg-[rgba(94,17,119,1)] gap-2 text-sm text-white font-bold text-center leading-[1.4] mt-6 px-4 py-2.5 rounded-lg hover:bg-[rgba(94,17,119,0.9)] transition-colors max-md:w-full">
                 Pesquisar Imóveis
               </button>
             </div>
           </div>
         </div>
         
-        <div className="flex-1 max-w-lg ml-5 max-md:w-full max-md:ml-0">
+        <div className="flex-1 max-w-lg ml-5 max-md:w-full max-md:ml-0 max-md:order-1">
           <div className="w-full max-md:max-w-full max-md:mt-10">
             <div className="max-md:max-w-full">
               <div className="gap-5 flex max-md:flex-col max-md:items-stretch">

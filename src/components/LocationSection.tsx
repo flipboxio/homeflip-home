@@ -17,8 +17,8 @@ const LocationCard: React.FC<LocationCardProps> = ({ name, properties, imageUrl,
     />
     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
     <div className="absolute bottom-4 left-4 right-4 text-white">
-      <h3 className="text-lg font-semibold mb-1">{name}</h3>
-      <div className="bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm inline-block">
+      <h3 className="text-lg font-semibold mb-1 max-md:text-base">{name}</h3>
+      <div className="bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm inline-block max-md:text-xs">
         {properties}
       </div>
     </div>
@@ -27,11 +27,11 @@ const LocationCard: React.FC<LocationCardProps> = ({ name, properties, imageUrl,
 
 export const LocationSection: React.FC = () => {
   return (
-    <section className="bg-[rgba(112,101,240,1)] flex w-full flex-col overflow-hidden items-center text-xs font-normal justify-center px-20 py-[79px] max-md:max-w-full max-md:px-5">
+    <section className="bg-[rgba(112,101,240,1)] flex w-full flex-col overflow-hidden items-center text-xs font-normal justify-center px-20 py-[79px] max-md:max-w-full max-md:px-5 max-md:py-[40px]">
       <div className="w-full max-w-[1248px]">
-        <div className="grid grid-cols-4 gap-4 h-[563px] max-md:grid-cols-2 max-md:h-auto">
-          {/* Salvador - Tall */}
-          <div className="col-span-1 row-span-2">
+        <div className="grid grid-cols-4 gap-4 h-[563px] max-md:grid-cols-1 max-md:h-auto max-md:gap-6">
+          {/* Salvador */}
+          <div className="col-span-1 row-span-2 max-md:col-span-1 max-md:row-span-1 max-md:h-[250px]">
             <LocationCard
               name="Salvador"
               properties="2 Propriedades"
@@ -40,8 +40,8 @@ export const LocationSection: React.FC = () => {
             />
           </div>
           
-          {/* Florianópolis - Medium */}
-          <div className="col-span-1 row-span-1">
+          {/* Florianópolis */}
+          <div className="col-span-1 row-span-1 max-md:col-span-1 max-md:h-[250px]">
             <LocationCard
               name="Florianópolis"
               properties="2 Propriedades"
@@ -50,8 +50,8 @@ export const LocationSection: React.FC = () => {
             />
           </div>
           
-          {/* Brasília - Wide */}
-          <div className="col-span-2 row-span-1">
+          {/* Brasília */}
+          <div className="col-span-2 row-span-1 max-md:col-span-1 max-md:h-[250px]">
             <LocationCard
               name="Brasília"
               properties="2 Propriedades"
@@ -60,8 +60,8 @@ export const LocationSection: React.FC = () => {
             />
           </div>
           
-          {/* Rio de Janeiro - Medium */}
-          <div className="col-span-1 row-span-1">
+          {/* Rio de Janeiro */}
+          <div className="col-span-1 row-span-1 max-md:col-span-1 max-md:h-[250px]">
             <LocationCard
               name="Rio de Janeiro"
               properties="2 Propriedades"
@@ -70,8 +70,8 @@ export const LocationSection: React.FC = () => {
             />
           </div>
           
-          {/* Balneário Camboriú - Wide */}
-          <div className="col-span-2 row-span-1">
+          {/* Balneário Camboriú */}
+          <div className="col-span-2 row-span-1 max-md:col-span-1 max-md:h-[250px]">
             <LocationCard
               name="Balneário Camboriú"
               properties="2 Propriedades"

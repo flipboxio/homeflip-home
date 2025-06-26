@@ -81,12 +81,12 @@ export const PropertiesSection: React.FC = () => {
   ];
 
   return (
-    <section className="bg-[rgba(243,243,243,1)] flex w-full flex-col items-center mt-[86px] pt-[68px] pb-[120px] px-[72px] max-md:max-w-full max-md:mt-10 max-md:pb-[100px] max-md:px-5">
-      <header className="flex w-[544px] max-w-full flex-col items-center text-[#000929] text-center">
-        <h2 className="text-[#000929] text-[40px] font-bold leading-[1.4] tracking-[-0.4px] max-md:max-w-full">
+    <section className="bg-[rgba(243,243,243,1)] flex w-full flex-col items-center mt-[86px] pt-[68px] pb-[120px] px-[72px] max-md:max-w-full max-md:mt-10 max-md:pb-[60px] max-md:px-5">
+      <header className="flex w-[544px] max-w-full flex-col items-center text-[#000929] text-center max-md:w-full">
+        <h2 className="text-[#000929] text-[40px] font-bold leading-[1.4] tracking-[-0.4px] max-md:text-[32px] max-md:leading-[1.3] max-md:max-w-full">
           Com base na sua localização
         </h2>
-        <p className="text-[#000929] text-base font-normal leading-[26px] opacity-70 mt-4 max-md:max-w-full">
+        <p className="text-[#000929] text-base font-normal leading-[26px] opacity-70 mt-4 max-md:text-sm max-md:leading-6 max-md:max-w-full">
           Algumas das propriedades selecionadas perto de você.
         </p>
       </header>
@@ -95,10 +95,10 @@ export const PropertiesSection: React.FC = () => {
         <div className="gap-5 flex max-md:flex-col max-md:items-stretch">
           <div className="w-[61%] max-md:w-full max-md:ml-0">
             <div className="items-stretch border-[color:var(--Shades-of-Purple-Purple-92,#E0DEF7)] flex w-full flex-col text-lg text-[#100A55] font-medium whitespace-nowrap tracking-[-0.09px] leading-none justify-center bg-[#F0EFFB] mx-auto px-[42px] py-5 rounded-lg border-[1.5px] border-solid max-md:max-w-full max-md:mt-10 max-md:px-5">
-              <div className="flex items-center gap-[29px] max-md:max-w-full">
+              <div className="flex items-center gap-[29px] max-md:flex-col max-md:gap-4 max-md:max-w-full">
                 <button
                   onClick={() => setActiveFilter('Alugar')}
-                  className={`self-stretch w-[146px] my-auto rounded-[0px_0px_0px_0px] ${
+                  className={`self-stretch w-[146px] my-auto rounded-[0px_0px_0px_0px] max-md:w-full ${
                     activeFilter === 'Alugar'
                       ? 'text-[#7065F0] font-bold'
                       : 'text-[#100A55]'
@@ -109,7 +109,7 @@ export const PropertiesSection: React.FC = () => {
                       ? 'border-[color:var(--Shades-of-Purple-Purple-92,#E0DEF7)] shadow-[0px_3px_40px_0px_rgba(14,8,84,0.05)] bg-white border-2 border-solid'
                       : ''
                   }`}>
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-2 max-md:justify-center">
                       <div className="self-stretch flex w-5 shrink-0 h-5 my-auto" />
                       <span className="self-stretch my-auto">Alugar</span>
                     </div>
@@ -118,13 +118,13 @@ export const PropertiesSection: React.FC = () => {
                 
                 <button
                   onClick={() => setActiveFilter('Temporada')}
-                  className={`self-stretch flex flex-col justify-center w-[166px] my-auto px-[35px] py-[11px] rounded-md ${
+                  className={`self-stretch flex flex-col justify-center w-[166px] my-auto px-[35px] py-[11px] rounded-md max-md:w-full ${
                     activeFilter === 'Temporada' 
                       ? 'text-[#7065F0] font-bold border-[color:var(--Shades-of-Purple-Purple-92,#E0DEF7)] shadow-[0px_3px_40px_0px_rgba(14,8,84,0.05)] bg-white border-2 border-solid' 
                       : 'text-[#100A55]'
                   }`}
                 >
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-2 max-md:justify-center">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets/040fe6f248e241579615f8e023273613/f926be56f08010d951b7fe72480c09e3b01bbc65?placeholderIfAbsent=true"
                       alt="Temporada icon"
@@ -136,20 +136,20 @@ export const PropertiesSection: React.FC = () => {
                 
                 <button
                   onClick={() => setActiveFilter('Mensal')}
-                  className={`self-stretch flex flex-col justify-center w-[89px] my-auto px-[15px] py-[11px] rounded-md ${
+                  className={`self-stretch flex flex-col justify-center w-[89px] my-auto px-[15px] py-[11px] rounded-md max-md:w-full ${
                     activeFilter === 'Mensal' 
                       ? 'text-[#7065F0] font-bold border-[color:var(--Shades-of-Purple-Purple-92,#E0DEF7)] shadow-[0px_3px_40px_0px_rgba(14,8,84,0.05)] bg-white border-2 border-solid' 
                       : 'text-[#100A55]'
                   }`}
                 >
-                  <span className="self-stretch my-auto">Mensal</span>
+                  <span className="self-stretch my-auto max-md:text-center">Mensal</span>
                 </button>
               </div>
             </div>
           </div>
           
           <div className="w-[39%] ml-5 max-md:w-full max-md:ml-0">
-            <div className="self-stretch text-base text-[#000929] font-medium my-auto max-md:mt-10">
+            <div className="self-stretch text-base text-[#000929] font-medium my-auto max-md:mt-4">
               <div className="border-[color:var(--Shades-of-Purple-Purple-92,#E0DEF7)] flex w-full flex-col justify-center bg-[#F7F7FD] px-4 py-5 rounded-lg border-2 border-solid max-md:pr-5">
                 <div className="flex items-center gap-4">
                   <img
@@ -189,7 +189,7 @@ export const PropertiesSection: React.FC = () => {
         </div>
       </div>
       
-      <button className="text-white self-stretch bg-[rgba(94,17,119,1)] gap-2.5 overflow-hidden text-base font-bold text-center mt-[72px] -mb-6 px-8 py-4 rounded-lg max-md:mt-10 max-md:mb-2.5 max-md:px-5 hover:bg-[rgba(94,17,119,0.9)] transition-colors">
+      <button className="text-white self-stretch bg-[rgba(94,17,119,1)] gap-2.5 overflow-hidden text-base font-bold text-center mt-[72px] -mb-6 px-8 py-4 rounded-lg max-md:mt-10 max-md:mb-2.5 max-md:px-5 max-md:w-full hover:bg-[rgba(94,17,119,0.9)] transition-colors">
         Ver mais Imóveis
       </button>
     </section>
