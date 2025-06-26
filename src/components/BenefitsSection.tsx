@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 interface BenefitCardProps {
@@ -50,8 +51,8 @@ export const BenefitsSection: React.FC = () => {
 
   return (
     <section className="self-center w-full max-w-[1120px] mt-[99px] max-md:max-w-full max-md:mt-10">
-      <div className="gap-5 flex max-md:flex-col max-md:items-stretch justify-center">
-        <div className="w-[39%] max-md:w-full max-md:ml-0">
+      <div className="gap-5 flex max-md:flex-col max-md:items-stretch justify-center items-center">
+        <div className="flex-1 max-w-md max-md:w-full max-md:ml-0">
           <div className="flex flex-col relative aspect-[0.832] pt-10 pb-[222px] px-10 rounded-[0px_0px_0px_0px] max-md:mt-10 max-md:pb-[100px] max-md:px-5">
             <img
               src="https://cdn.builder.io/api/v1/image/assets/040fe6f248e241579615f8e023273613/8bbd0d4f8b0b548794e5a9e33b79a359740eee75?placeholderIfAbsent=true"
@@ -75,7 +76,7 @@ export const BenefitsSection: React.FC = () => {
           </div>
         </div>
         
-        <div className="w-[61%] ml-5 max-md:w-full max-md:ml-0">
+        <div className="flex-1 max-w-lg ml-5 max-md:w-full max-md:ml-0">
           <div className="w-full max-md:max-w-full max-md:mt-10">
             <div className="max-md:max-w-full">
               <div className="gap-5 flex max-md:flex-col max-md:items-stretch">
