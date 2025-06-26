@@ -14,7 +14,7 @@ export const HeroSection: React.FC = () => {
       <img
         src="https://cdn.builder.io/api/v1/image/assets/040fe6f248e241579615f8e023273613/f65bc982d7ba9a21703bcbe77732bbcfa243bc19?placeholderIfAbsent=true"
         alt="Hero background"
-        className="absolute h-full w-[calc(100%-100px)] object-cover inset-0 mx-auto transform scale-y-[-1]"
+        className="absolute h-full w-[calc(100%-100px)] object-cover inset-0 mx-auto transform scale-y-[-1] rounded-t-[25px]"
       />
       
       <div className="relative z-10">
