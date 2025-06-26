@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { SearchForm } from './SearchForm';
 
@@ -12,7 +13,7 @@ export const HeroSection: React.FC = () => {
       <img
         src="https://cdn.builder.io/api/v1/image/assets/040fe6f248e241579615f8e023273613/f65bc982d7ba9a21703bcbe77732bbcfa243bc19?placeholderIfAbsent=true"
         alt="Hero background"
-        className="absolute h-full w-full object-cover inset-0"
+        className="absolute h-full w-[80%] object-cover inset-0 mx-auto transform scale-y-[-1]"
       />
       
       <div className="relative z-10">
