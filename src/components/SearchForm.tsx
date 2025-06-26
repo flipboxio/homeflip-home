@@ -1,4 +1,6 @@
+
 import React, { useState } from 'react';
+import { ChevronDown } from 'lucide-react';
 
 interface SearchFormProps {
   onSearch?: (searchData: SearchData) => void;
@@ -102,9 +104,9 @@ export const SearchForm: React.FC<SearchFormProps> = ({ onSearch }) => {
         
         <div className="flex w-full items-stretch gap-4 text-base text-black font-normal leading-none mt-6 max-md:max-w-full">
           <div className="flex-1">
-            <div className="bg-[rgba(246,246,246,1)] flex min-h-[50px] w-full items-center px-4 py-[15px] rounded-md">
+            <div className="bg-[rgba(246,246,246,1)] flex min-h-[50px] w-full items-center justify-between px-4 py-[15px] rounded-md relative">
               <select
-                className="self-stretch flex-1 bg-transparent border-none outline-none appearance-none"
+                className="self-stretch flex-1 bg-transparent border-none outline-none appearance-none pr-8"
                 value={searchData.category}
                 onChange={(e) => setSearchData(prev => ({ ...prev, category: e.target.value }))}
               >
@@ -113,13 +115,14 @@ export const SearchForm: React.FC<SearchFormProps> = ({ onSearch }) => {
                 <option value="comercial">Comercial</option>
                 <option value="industrial">Industrial</option>
               </select>
+              <ChevronDown className="absolute right-4 w-4 h-4 text-gray-600 pointer-events-none" />
             </div>
           </div>
           
           <div className="flex-1">
-            <div className="bg-[rgba(246,246,246,1)] flex min-h-[50px] w-full items-center px-4 py-[15px] rounded-md">
+            <div className="bg-[rgba(246,246,246,1)] flex min-h-[50px] w-full items-center justify-between px-4 py-[15px] rounded-md relative">
               <select
-                className="self-stretch flex-1 bg-transparent border-none outline-none appearance-none"
+                className="self-stretch flex-1 bg-transparent border-none outline-none appearance-none pr-8"
                 value={searchData.propertyType}
                 onChange={(e) => setSearchData(prev => ({ ...prev, propertyType: e.target.value }))}
               >
@@ -129,6 +132,7 @@ export const SearchForm: React.FC<SearchFormProps> = ({ onSearch }) => {
                 <option value="condominio">Condomínio</option>
                 <option value="terreno">Terreno</option>
               </select>
+              <ChevronDown className="absolute right-4 w-4 h-4 text-gray-600 pointer-events-none" />
             </div>
           </div>
           
