@@ -16,7 +16,7 @@ const StatCard: React.FC<StatCardProps> = ({
   bgColor = "bg-white", 
   textColor = "text-[#000929]" 
 }) => (
-  <div className={`w-full ${textColor} ${bgColor} mx-auto pt-8 pb-1.5 px-8 rounded-lg max-md:max-w-full max-md:mt-8 max-md:px-5`}>
+  <div className={`w-full ${textColor} ${bgColor} mx-auto p-[35px] rounded-lg max-md:max-w-full max-md:mt-8 max-md:px-5`}>
     <div className="flex gap-6">
       <img
         src={icon}
