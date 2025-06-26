@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 interface StatCardProps {
@@ -76,7 +77,7 @@ export const StatsSection: React.FC = () => {
               title="Visita virtual à casa"
               description="Você pode se comunicar diretamente com os proprietários e nós lhe forneceremos um tour virtual antes de comprar ou alugar o imóvel."
               bgColor="bg-white"
-              textColor="text-white"
+              textColor="text-[#000929]"
             />
           </div>
           <div className="w-6/12 ml-5 max-md:w-full max-md:ml-0">
