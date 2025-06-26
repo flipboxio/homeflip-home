@@ -17,7 +17,7 @@ export const NewsletterSection: React.FC = () => {
             <h2 className="text-[#000929] text-[40px] font-bold leading-[1.4] tracking-[-0.4px]">
               Você é um senhorio?
             </h2>
-            <p className="text-[#000929] text-center text-base font-medium leading-[26px] opacity-50 mt-4 max-md:max-w-full">
+            <p className="text-[#000929] text-center text-base font-medium leading-[26px] opacity-50 mt-4 max-md:max-w-full my-[29px]">
               Descubra maneiras de aumentar o valor do seu imóvel e
               anunciá-lo. Sem spam.
             </p>
