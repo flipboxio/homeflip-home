@@ -1,0 +1,88 @@
+
+import React from 'react';
+
+export const Footer: React.FC = () => {
+  return (
+    <footer className="w-full bg-gradient-to-r from-[#E8F9F7] to-[#F0FDF4] px-20 py-16 max-md:px-5 max-md:py-10">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+        {/* Logo e descrição */}
+        <div className="md:col-span-2">
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/040fe6f248e241579615f8e023273613/588ca80530d3bec06dda69c7fd03e3cc4bb06b4e?placeholderIfAbsent=true"
+            alt="Company Logo"
+            className="aspect-[4.48] object-contain w-[157px] mb-4"
+          />
+          <p className="text-gray-600 text-sm leading-6 max-w-md">
+            Encontre o imóvel dos seus sonhos com a nossa plataforma completa de busca e locação de propriedades.
+          </p>
+        </div>
+
+        {/* Links principais */}
+        <div>
+          <h3 className="text-black font-semibold text-lg mb-4">Menu</h3>
+          <ul className="space-y-3">
+            <li>
+              <a href="#" className="text-gray-600 hover:text-[#7065F0] transition-colors text-sm">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="#" className="text-gray-600 hover:text-[#7065F0] transition-colors text-sm">
+                Imóveis
+              </a>
+            </li>
+            <li>
+              <a href="#" className="text-gray-600 hover:text-[#7065F0] transition-colors text-sm">
+                Sobre nós
+              </a>
+            </li>
+            <li>
+              <a href="#" className="text-gray-600 hover:text-[#7065F0] transition-colors text-sm">
+                Contato
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        {/* Contato */}
+        <div>
+          <h3 className="text-black font-semibold text-lg mb-4">Contato</h3>
+          <ul className="space-y-3">
+            <li>
+              <a href="tel:+5511999999999" className="text-gray-600 hover:text-[#7065F0] transition-colors text-sm flex items-center gap-2">
+                <span>(11) 9999-9999</span>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:contato@empresa.com" className="text-gray-600 hover:text-[#7065F0] transition-colors text-sm">
+                contato@empresa.com
+              </a>
+            </li>
+            <li>
+              <span className="text-gray-600 text-sm">
+                São Paulo, SP
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      {/* Copyright */}
+      <div className="max-w-7xl mx-auto mt-12 pt-8 border-t border-gray-200">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-gray-500 text-sm">
+            © 2024 Todos os direitos reservados.
+          </p>
+          <div className="flex gap-6">
+            <a href="#" className="text-gray-500 hover:text-[#7065F0] transition-colors text-sm">
+              Política de Privacidade
+            </a>
+            <a href="#" className="text-gray-500 hover:text-[#7065F0] transition-colors text-sm">
+              Termos de Uso
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
