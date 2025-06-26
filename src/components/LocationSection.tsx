@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 interface LocationTagProps {
@@ -18,49 +19,49 @@ const LocationTag: React.FC<LocationTagProps> = ({ name, properties, className =
 export const LocationSection: React.FC = () => {
   return (
     <section className="bg-[rgba(112,101,240,1)] flex w-full flex-col overflow-hidden items-center text-xs font-normal justify-center px-20 py-[79px] max-md:max-w-full max-md:px-5">
-      <div className="flex flex-col relative min-h-[563px] w-full max-w-[1248px] pl-6 pr-20 pt-[194px] pb-[17px] rounded-[28px] max-md:max-w-full max-md:pt-[100px] max-md:px-5">
-        <img
-          src="https://cdn.builder.io/api/v1/image/assets/040fe6f248e241579615f8e023273613/c924464366a9f119ddb8d3bcdb90ec0d4921ebe3?placeholderIfAbsent=true"
-          alt="Brazil map"
-          className="absolute h-full w-full object-cover inset-0"
-        />
-        
-        <div className="relative self-center z-10 flex w-[438px] max-w-full flex-col">
+      <div className="flex flex-col relative min-h-[563px] w-full max-w-[1248px] rounded-[28px] bg-gray-100 max-md:max-w-full">
+        {/* Salvador - Nordeste */}
+        <div className="absolute top-[100px] left-[200px] z-10">
           <LocationTag
             name="Salvador"
             properties="2 Propriedades"
-            className="w-[122px] max-w-full"
-          />
-          
-          <LocationTag
-            name="Fernando de Noronha"
-            properties="2 Propriedades"
-            className="w-[133px] max-w-full mt-4"
           />
         </div>
         
-        <div className="relative mt-[-33px] w-[122px] max-w-full">
+        {/* Fernando de Noronha - Nordeste (mais ao norte) */}
+        <div className="absolute top-[80px] left-[300px] z-10">
+          <LocationTag
+            name="Fernando de Noronha"
+            properties="2 Propriedades"
+          />
+        </div>
+        
+        {/* Balneário Camboriú - Sul */}
+        <div className="absolute bottom-[150px] right-[200px] z-10">
           <LocationTag
             name="Balneário Camboriu"
             properties="2 Propriedades"
           />
         </div>
         
-        <div className="relative z-10 flex w-[449px] max-w-full flex-col mt-[212px] max-md:mt-10">
+        {/* Brasília - Centro */}
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
           <LocationTag
             name="Brasilia"
             properties="2 Propriedades"
-            className="z-10 w-[122px] max-w-full"
-          />
-          
-          <LocationTag
-            name="Florianópolis"
-            properties="2 Propriedades"
-            className="w-[122px] max-w-full -mt-8"
           />
         </div>
         
-        <div className="relative flex mt-[-33px] w-[123px] max-w-full flex-col items-stretch">
+        {/* Florianópolis - Sul */}
+        <div className="absolute bottom-[120px] right-[150px] z-10">
+          <LocationTag
+            name="Florianópolis"
+            properties="2 Propriedades"
+          />
+        </div>
+        
+        {/* Rio de Janeiro - Sudeste */}
+        <div className="absolute bottom-[200px] left-[400px] z-10">
           <LocationTag
             name="Rio de Janeiro"
             properties="2 Propriedades"
