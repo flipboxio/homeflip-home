@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { PropertyCard } from './PropertyCard';
 
@@ -93,7 +94,7 @@ export const PropertiesSection: React.FC = () => {
       <div className="w-full max-w-[1154px] mt-[15px] max-md:max-w-full">
         <div className="gap-5 flex max-md:flex-col max-md:items-stretch">
           <div className="w-[61%] max-md:w-full max-md:ml-0">
-            <div className="items-stretch border-[color:var(--Shades-of-Purple-Purple-92,#E0DEF7)] flex w-full flex-col text-lg text-[#100A55] font-medium whitespace-nowrap tracking-[-0.09px] leading-none justify-center bg-[#F0EFFB] mx-auto p-[42px] rounded-lg border-[1.5px] border-solid max-md:max-w-full max-md:mt-10 max-md:px-5">
+            <div className="items-stretch border-[color:var(--Shades-of-Purple-Purple-92,#E0DEF7)] flex w-full flex-col text-lg text-[#100A55] font-medium whitespace-nowrap tracking-[-0.09px] leading-none justify-center bg-[#F0EFFB] mx-auto px-[42px] py-5 rounded-lg border-[1.5px] border-solid max-md:max-w-full max-md:mt-10 max-md:px-5">
               <div className="flex items-center gap-[29px] max-md:max-w-full">
                 <button
                   onClick={() => setActiveFilter('Alugar')}
@@ -117,8 +118,10 @@ export const PropertiesSection: React.FC = () => {
                 
                 <button
                   onClick={() => setActiveFilter('Temporada')}
-                  className={`self-stretch flex flex-col justify-center w-[166px] my-auto px-[35px] py-[11px] rounded-[0px_0px_0px_0px] ${
-                    activeFilter === 'Temporada' ? 'text-[#7065F0] font-bold' : 'text-[#100A55]'
+                  className={`self-stretch flex flex-col justify-center w-[166px] my-auto px-[35px] py-[11px] rounded-md ${
+                    activeFilter === 'Temporada' 
+                      ? 'text-[#7065F0] font-bold border-[color:var(--Shades-of-Purple-Purple-92,#E0DEF7)] shadow-[0px_3px_40px_0px_rgba(14,8,84,0.05)] bg-white border-2 border-solid' 
+                      : 'text-[#100A55]'
                   }`}
                 >
                   <div className="flex items-center gap-2">
@@ -133,16 +136,13 @@ export const PropertiesSection: React.FC = () => {
                 
                 <button
                   onClick={() => setActiveFilter('Mensal')}
-                  className={`flex flex-col self-stretch relative aspect-[3.423] w-[89px] my-auto ${
-                    activeFilter === 'Mensal' ? 'text-[#7065F0] font-bold' : 'text-[#100A55]'
+                  className={`self-stretch flex flex-col justify-center w-[89px] my-auto px-[15px] py-[11px] rounded-md ${
+                    activeFilter === 'Mensal' 
+                      ? 'text-[#7065F0] font-bold border-[color:var(--Shades-of-Purple-Purple-92,#E0DEF7)] shadow-[0px_3px_40px_0px_rgba(14,8,84,0.05)] bg-white border-2 border-solid' 
+                      : 'text-[#100A55]'
                   }`}
                 >
-                  <img
-                    src="https://cdn.builder.io/api/v1/image/assets/040fe6f248e241579615f8e023273613/58ca4044031ddc3ac43baf7b24164504a610255e?placeholderIfAbsent=true"
-                    alt="Mensal background"
-                    className="absolute h-full w-full object-cover inset-0"
-                  />
-                  <span className="relative self-stretch gap-2">Mensal</span>
+                  <span className="self-stretch my-auto">Mensal</span>
                 </button>
               </div>
             </div>
