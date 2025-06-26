@@ -62,9 +62,9 @@ export const PropertyCard: React.FC<PropertyCardProps> = ({
           {features.map((feature, index) => (
             <div
               key={index}
-              className="flex h-[38px] flex-col items-stretch whitespace-nowrap justify-center max-md:flex-1 max-md:text-center"
+              className="flex h-[38px] flex-col items-stretch whitespace-nowrap justify-center max-md:flex-1 max-md:text-center max-md:items-center"
             >
-              <div className="flex w-full items-center gap-2 text-base leading-none max-md:justify-center max-md:gap-1 max-md:flex-col">
+              <div className="flex w-full items-center gap-2 text-base leading-none max-md:justify-center max-md:gap-1 max-md:flex-col max-md:items-center">
                 <img
                   src={feature.icon}
                   alt={`${feature.label} icon`}
