@@ -1,4 +1,5 @@
 
+
 import React, { useState } from 'react';
 
 interface SearchFormProps {
@@ -34,7 +35,7 @@ export const SearchForm: React.FC<SearchFormProps> = ({ onSearch }) => {
 
   return (
     <div className="flex justify-center w-full">
-      <form onSubmit={handleSubmit} className="relative bg-[rgba(234,232,255,1)] shadow-[5px_5px_38px_5px_rgba(0,0,0,0.25)] w-full max-w-[1077px] mt-10 pl-[22px] pr-[52px] py-[23px] rounded-[19px] max-md:max-w-full max-md:px-5">
+      <form onSubmit={handleSubmit} className="relative bg-[rgba(234,232,255,1)] shadow-[5px_5px_38px_5px_rgba(0,0,0,0.25)] w-full max-w-[1077px] mt-10 p-[25px] rounded-[19px] max-md:max-w-full max-md:px-5">
         <div className="flex w-full items-center gap-[17px] text-lg text-[#100A55] font-medium flex-wrap max-md:max-w-full">
           <button
             type="button"
@@ -85,7 +86,7 @@ export const SearchForm: React.FC<SearchFormProps> = ({ onSearch }) => {
             <span className="whitespace-nowrap tracking-[-0.09px] leading-none">Mensal</span>
           </button>
           
-          <div className="border-[color:var(--Shades-of-Purple-Purple-92,#E0DEF7)] bg-[#F7F7FD] self-stretch flex items-stretch gap-4 text-base text-[#000929] px-[49px] py-5 rounded-lg border-2 border-solid max-md:px-5">
+          <div className="border-[color:var(--Shades-of-Purple-Purple-92,#E0DEF7)] bg-[#F7F7FD] flex-1 flex items-stretch gap-4 text-base text-[#000929] px-[49px] py-5 rounded-lg border-2 border-solid max-md:px-5">
             <img
               src="https://cdn.builder.io/api/v1/image/assets/040fe6f248e241579615f8e023273613/953e0da856bde3cf775114dc0bc6888074e90d4b?placeholderIfAbsent=true"
               alt="Search icon"
@@ -94,15 +95,15 @@ export const SearchForm: React.FC<SearchFormProps> = ({ onSearch }) => {
             <input
               type="text"
               placeholder="Pesquisar Imovel"
-              className="opacity-50 basis-auto bg-transparent border-none outline-none"
+              className="opacity-50 flex-1 bg-transparent border-none outline-none"
               value={searchData.location}
               onChange={(e) => setSearchData(prev => ({ ...prev, location: e.target.value }))}
             />
           </div>
         </div>
         
-        <div className="flex w-full items-stretch gap-3 text-base text-black font-normal leading-none flex-wrap mt-4 max-md:max-w-full max-md:mr-[7px]">
-          <div className="whitespace-nowrap">
+        <div className="flex w-full items-stretch gap-4 text-base text-black font-normal leading-none flex-wrap mt-6 max-md:max-w-full">
+          <div className="flex-1">
             <div className="bg-[rgba(246,246,246,1)] flex min-h-[50px] w-full items-center gap-2 px-4 py-[15px] rounded-md">
               <select
                 className="self-stretch flex-1 shrink basis-[0%] my-auto bg-transparent border-none outline-none"
@@ -122,7 +123,7 @@ export const SearchForm: React.FC<SearchFormProps> = ({ onSearch }) => {
             </div>
           </div>
           
-          <div>
+          <div className="flex-1">
             <div className="bg-[rgba(246,246,246,1)] flex min-h-[50px] w-full items-center gap-2 px-4 py-[15px] rounded-md">
               <select
                 className="self-stretch flex-1 shrink basis-[0%] my-auto bg-transparent border-none outline-none"
@@ -143,7 +144,7 @@ export const SearchForm: React.FC<SearchFormProps> = ({ onSearch }) => {
             </div>
           </div>
           
-          <div className="whitespace-nowrap">
+          <div className="flex-1">
             <div className="bg-[rgba(246,246,246,1)] flex min-h-[50px] w-full items-center gap-2 px-4 py-[15px] rounded-md">
               <input
                 type="text"
@@ -170,7 +171,7 @@ export const SearchForm: React.FC<SearchFormProps> = ({ onSearch }) => {
           
           <button
             type="submit"
-            className="bg-[rgba(94,17,119,1)] flex min-h-[50px] items-center gap-3 overflow-hidden text-white font-medium whitespace-nowrap uppercase justify-center px-5 py-[13px] rounded-md hover:bg-[rgba(94,17,119,0.9)] transition-colors"
+            className="bg-[rgba(94,17,119,1)] flex min-h-[50px] items-center gap-3 overflow-hidden text-white font-medium whitespace-nowrap uppercase justify-center px-8 py-[13px] rounded-md hover:bg-[rgba(94,17,119,0.9)] transition-colors"
           >
             <img
               src="https://cdn.builder.io/api/v1/image/assets/040fe6f248e241579615f8e023273613/a2c8b7c31f1e98bd46ebeae47bd6f163e60e1113?placeholderIfAbsent=true"
@@ -184,3 +185,4 @@ export const SearchForm: React.FC<SearchFormProps> = ({ onSearch }) => {
     </div>
   );
 };
+
