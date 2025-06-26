@@ -58,23 +58,23 @@ export const PropertyCard: React.FC<PropertyCardProps> = ({
           </div>
         </div>
         
-        <div className="flex w-full gap-[40px_41px] text-[rgba(16,14,44,1)] font-medium justify-between mt-5 pt-3 border-[rgba(122,116,116,0.1)] border-t">
+        <div className="flex w-full gap-[40px_41px] text-[rgba(16,14,44,1)] font-medium justify-between mt-5 pt-3 border-[rgba(122,116,116,0.1)] border-t max-md:gap-3 max-md:flex-wrap">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="flex h-[38px] flex-col items-stretch whitespace-nowrap justify-center"
+              className="flex h-[38px] flex-col items-stretch whitespace-nowrap justify-center max-md:flex-1 max-md:min-w-[70px] max-md:text-center"
             >
-              <div className="flex w-full items-center gap-2 text-base leading-none">
+              <div className="flex w-full items-center gap-2 text-base leading-none max-md:justify-center max-md:gap-1">
                 <img
                   src={feature.icon}
                   alt={`${feature.label} icon`}
-                  className="aspect-[1] object-contain w-6 self-stretch shrink-0 my-auto"
+                  className="aspect-[1] object-contain w-6 self-stretch shrink-0 my-auto max-md:w-4"
                 />
-                <span className="self-stretch min-h-3 my-auto">
+                <span className="self-stretch min-h-3 my-auto max-md:text-sm">
                   {feature.value}
                 </span>
               </div>
-              <div className="text-sm leading-none mt-3">
+              <div className="text-sm leading-none mt-3 max-md:text-xs">
                 {feature.label}
               </div>
             </div>
