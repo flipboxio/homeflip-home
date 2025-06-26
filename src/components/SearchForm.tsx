@@ -1,5 +1,3 @@
-
-
 import React, { useState } from 'react';
 
 interface SearchFormProps {
@@ -43,7 +41,7 @@ export const SearchForm: React.FC<SearchFormProps> = ({ onSearch }) => {
             className={`self-stretch flex flex-col justify-center px-[70px] py-[11px] rounded-md max-md:px-5 transition-colors ${
               activeFilter === 'Alugar'
                 ? 'border-[color:var(--Shades-of-Purple-Purple-92,#E0DEF7)] shadow-[0px_3px_40px_0px_rgba(14,8,84,0.05)] bg-white text-[#7065F0] font-bold border-2 border-solid'
-                : 'text-[#100A55] hover:opacity-80'
+                : 'text-[#100A55] hover:opacity-80 bg-transparent'
             }`}
           >
             <div className="flex items-center justify-center gap-2">
@@ -58,7 +56,7 @@ export const SearchForm: React.FC<SearchFormProps> = ({ onSearch }) => {
             className={`self-stretch flex items-center justify-center gap-[9px] px-9 py-[11px] rounded-md max-md:px-5 transition-colors ${
               activeFilter === 'Temporada'
                 ? 'border-[color:var(--Shades-of-Purple-Purple-92,#E0DEF7)] shadow-[0px_3px_40px_0px_rgba(14,8,84,0.05)] bg-white text-[#7065F0] font-bold border-2 border-solid'
-                : 'text-[#100A55] hover:opacity-80'
+                : 'text-[#100A55] hover:opacity-80 bg-transparent'
             }`}
           >
             <img
@@ -75,7 +73,7 @@ export const SearchForm: React.FC<SearchFormProps> = ({ onSearch }) => {
             className={`self-stretch flex items-center justify-center gap-[9px] px-[30px] py-[11px] rounded-md max-md:px-5 transition-colors ${
               activeFilter === 'Mensal'
                 ? 'border-[color:var(--Shades-of-Purple-Purple-92,#E0DEF7)] shadow-[0px_3px_40px_0px_rgba(14,8,84,0.05)] bg-white text-[#7065F0] font-bold border-2 border-solid'
-                : 'text-[#100A55] hover:opacity-80'
+                : 'text-[#100A55] hover:opacity-80 bg-transparent'
             }`}
           >
             <img
@@ -102,11 +100,11 @@ export const SearchForm: React.FC<SearchFormProps> = ({ onSearch }) => {
           </div>
         </div>
         
-        <div className="flex w-full items-stretch gap-4 text-base text-black font-normal leading-none flex-wrap mt-6 max-md:max-w-full">
+        <div className="flex w-full items-stretch gap-4 text-base text-black font-normal leading-none mt-6 max-md:max-w-full">
           <div className="flex-1">
-            <div className="bg-[rgba(246,246,246,1)] flex min-h-[50px] w-full items-center gap-2 px-4 py-[15px] rounded-md">
+            <div className="bg-[rgba(246,246,246,1)] flex min-h-[50px] w-full items-center px-4 py-[15px] rounded-md">
               <select
-                className="self-stretch flex-1 shrink basis-[0%] my-auto bg-transparent border-none outline-none"
+                className="self-stretch flex-1 bg-transparent border-none outline-none appearance-none"
                 value={searchData.category}
                 onChange={(e) => setSearchData(prev => ({ ...prev, category: e.target.value }))}
               >
@@ -115,18 +113,13 @@ export const SearchForm: React.FC<SearchFormProps> = ({ onSearch }) => {
                 <option value="comercial">Comercial</option>
                 <option value="industrial">Industrial</option>
               </select>
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets/040fe6f248e241579615f8e023273613/ca4747693c7e38ea571ec255b52a98a450ec02e1?placeholderIfAbsent=true"
-                alt="Dropdown arrow"
-                className="aspect-[1] object-contain w-4 self-stretch shrink-0 my-auto"
-              />
             </div>
           </div>
           
           <div className="flex-1">
-            <div className="bg-[rgba(246,246,246,1)] flex min-h-[50px] w-full items-center gap-2 px-4 py-[15px] rounded-md">
+            <div className="bg-[rgba(246,246,246,1)] flex min-h-[50px] w-full items-center px-4 py-[15px] rounded-md">
               <select
-                className="self-stretch flex-1 shrink basis-[0%] my-auto bg-transparent border-none outline-none"
+                className="self-stretch flex-1 bg-transparent border-none outline-none appearance-none"
                 value={searchData.propertyType}
                 onChange={(e) => setSearchData(prev => ({ ...prev, propertyType: e.target.value }))}
               >
@@ -136,11 +129,6 @@ export const SearchForm: React.FC<SearchFormProps> = ({ onSearch }) => {
                 <option value="condominio">Condomínio</option>
                 <option value="terreno">Terreno</option>
               </select>
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets/040fe6f248e241579615f8e023273613/8535651e5a706af3e17a217b64ccd6b4a468a0f9?placeholderIfAbsent=true"
-                alt="Dropdown arrow"
-                className="aspect-[1] object-contain w-4 self-stretch shrink-0 my-auto"
-              />
             </div>
           </div>
           
@@ -149,14 +137,14 @@ export const SearchForm: React.FC<SearchFormProps> = ({ onSearch }) => {
               <input
                 type="text"
                 placeholder="Localização"
-                className="self-stretch flex-1 shrink basis-[0%] my-auto bg-transparent border-none outline-none"
+                className="self-stretch flex-1 bg-transparent border-none outline-none"
                 value={searchData.location}
                 onChange={(e) => setSearchData(prev => ({ ...prev, location: e.target.value }))}
               />
               <img
                 src="https://cdn.builder.io/api/v1/image/assets/040fe6f248e241579615f8e023273613/5b84a4ab2a2bfdb3af0a9fdc0bc3fba77774b37e?placeholderIfAbsent=true"
                 alt="Location icon"
-                className="aspect-[1] object-contain w-4 self-stretch shrink-0 my-auto"
+                className="aspect-[1] object-contain w-4 shrink-0"
               />
             </div>
           </div>
@@ -171,7 +159,7 @@ export const SearchForm: React.FC<SearchFormProps> = ({ onSearch }) => {
           
           <button
             type="submit"
-            className="bg-[rgba(94,17,119,1)] flex min-h-[50px] items-center gap-3 overflow-hidden text-white font-medium whitespace-nowrap uppercase justify-center px-8 py-[13px] rounded-md hover:bg-[rgba(94,17,119,0.9)] transition-colors"
+            className="bg-[rgba(94,17,119,1)] flex min-h-[50px] items-center gap-3 overflow-hidden text-white font-medium whitespace-nowrap uppercase justify-center px-8 py-[13px] rounded-md hover:bg-[rgba(94,17,119,0.9)] transition-colors flex-1"
           >
             <img
               src="https://cdn.builder.io/api/v1/image/assets/040fe6f248e241579615f8e023273613/a2c8b7c31f1e98bd46ebeae47bd6f163e60e1113?placeholderIfAbsent=true"
@@ -185,4 +173,3 @@ export const SearchForm: React.FC<SearchFormProps> = ({ onSearch }) => {
     </div>
   );
 };
-
