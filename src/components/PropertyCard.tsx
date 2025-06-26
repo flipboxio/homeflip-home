@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 interface PropertyFeature {
@@ -21,6 +22,11 @@ export const PropertyCard: React.FC<PropertyCardProps> = ({
   price,
   features
 }) => {
+  const handleTitleClick = () => {
+    console.log(`Navegando para detalhes do imóvel: ${title}`);
+    // Aqui seria implementada a navegação para a página de detalhes
+  };
+
   return (
     <article className="grow max-md:mt-6">
       <img
@@ -32,7 +38,10 @@ export const PropertyCard: React.FC<PropertyCardProps> = ({
       <div className="bg-white shadow-[0px_4px_10px_rgba(0,0,0,0.07)] w-full max-w-[416px] p-6 rounded-[0px_0px_12px_12px] max-md:px-5">
         <div className="flex w-full flex-col items-stretch">
           <div>
-            <h3 className="text-black text-xl font-semibold leading-none">
+            <h3 
+              className="text-black text-xl font-semibold leading-none cursor-pointer hover:text-[#7065F0] transition-colors"
+              onClick={handleTitleClick}
+            >
               {title}
             </h3>
             <p className="gap-1 text-base text-[rgba(122,116,116,1)] font-normal leading-none mt-4">
