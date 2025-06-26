@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 
 interface SearchFormProps {
@@ -38,31 +39,31 @@ export const SearchForm: React.FC<SearchFormProps> = ({ onSearch }) => {
           <button
             type="button"
             onClick={() => handleFilterChange('Alugar')}
-            className={`self-stretch flex flex-col justify-center px-[70px] py-[11px] rounded-md max-md:px-5 ${
+            className={`self-stretch flex flex-col justify-center px-[70px] py-[11px] rounded-md max-md:px-5 transition-colors ${
               activeFilter === 'Alugar'
                 ? 'border-[color:var(--Shades-of-Purple-Purple-92,#E0DEF7)] shadow-[0px_3px_40px_0px_rgba(14,8,84,0.05)] bg-white text-[#7065F0] font-bold border-2 border-solid'
-                : 'bg-white text-[#100A55] hover:bg-gray-50 transition-colors'
+                : 'text-[#100A55] hover:opacity-80'
             }`}
           >
-            <div className="flex items-center gap-2">
-              <div className="self-stretch flex w-5 shrink-0 h-5 my-auto" />
-              <span className="self-stretch my-auto whitespace-nowrap tracking-[-0.09px] leading-none">Alugar</span>
+            <div className="flex items-center justify-center gap-2">
+              <div className="self-stretch flex w-5 shrink-0 h-5" />
+              <span className="self-stretch whitespace-nowrap tracking-[-0.09px] leading-none">Alugar</span>
             </div>
           </button>
           
           <button
             type="button"
             onClick={() => handleFilterChange('Temporada')}
-            className={`self-stretch flex items-stretch gap-[9px] px-9 py-[11px] rounded-md max-md:px-5 transition-colors ${
+            className={`self-stretch flex items-center justify-center gap-[9px] px-9 py-[11px] rounded-md max-md:px-5 transition-colors ${
               activeFilter === 'Temporada'
                 ? 'border-[color:var(--Shades-of-Purple-Purple-92,#E0DEF7)] shadow-[0px_3px_40px_0px_rgba(14,8,84,0.05)] bg-white text-[#7065F0] font-bold border-2 border-solid'
-                : 'bg-white text-[#100A55] hover:bg-gray-50'
+                : 'text-[#100A55] hover:opacity-80'
             }`}
           >
             <img
               src="https://cdn.builder.io/api/v1/image/assets/040fe6f248e241579615f8e023273613/defe471ce3368bbe2703a3813c897250bb63791a?placeholderIfAbsent=true"
               alt="Temporada icon"
-              className="aspect-[1] object-contain w-5 shrink-0 mt-[5px]"
+              className="aspect-[1] object-contain w-5 shrink-0"
             />
             <span className="whitespace-nowrap tracking-[-0.09px] leading-none">Temporada</span>
           </button>
@@ -70,16 +71,16 @@ export const SearchForm: React.FC<SearchFormProps> = ({ onSearch }) => {
           <button
             type="button"
             onClick={() => handleFilterChange('Mensal')}
-            className={`self-stretch flex items-stretch gap-[9px] px-[30px] py-[11px] rounded-md max-md:px-5 transition-colors ${
+            className={`self-stretch flex items-center justify-center gap-[9px] px-[30px] py-[11px] rounded-md max-md:px-5 transition-colors ${
               activeFilter === 'Mensal'
                 ? 'border-[color:var(--Shades-of-Purple-Purple-92,#E0DEF7)] shadow-[0px_3px_40px_0px_rgba(14,8,84,0.05)] bg-white text-[#7065F0] font-bold border-2 border-solid'
-                : 'bg-white text-[#100A55] hover:bg-gray-50'
+                : 'text-[#100A55] hover:opacity-80'
             }`}
           >
             <img
               src="https://cdn.builder.io/api/v1/image/assets/040fe6f248e241579615f8e023273613/eb30f580705cb6ccb48ee8aa2d35879b03454a24?placeholderIfAbsent=true"
               alt="Mensal icon"
-              className="aspect-[1] object-contain w-5 shrink-0 mt-[5px]"
+              className="aspect-[1] object-contain w-5 shrink-0"
             />
             <span className="whitespace-nowrap tracking-[-0.09px] leading-none">Mensal</span>
           </button>
