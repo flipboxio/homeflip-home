@@ -27,6 +27,11 @@ export const PropertyCard: React.FC<PropertyCardProps> = ({
     // Aqui seria implementada a navegação para a página de detalhes
   };
 
+  const handleMoreInfoClick = () => {
+    console.log(`Ver mais informações do imóvel: ${title}`);
+    // Aqui seria implementada a navegação para a página detalhada do imóvel
+  };
+
   return (
     <article className="grow max-md:mt-6">
       <img
@@ -75,6 +80,13 @@ export const PropertyCard: React.FC<PropertyCardProps> = ({
             </div>
           ))}
         </div>
+
+        <button
+          onClick={handleMoreInfoClick}
+          className="w-full bg-[#117730] text-white text-base font-medium py-3 px-4 rounded-lg mt-6 hover:bg-[#0f6429] transition-colors"
+        >
+          Ver mais informações do Imóvel
+        </button>
       </div>
     </article>
   );
