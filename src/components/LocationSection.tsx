@@ -1,17 +1,26 @@
 
 import React from 'react';
 
-interface LocationTagProps {
+interface LocationCardProps {
   name: string;
   properties: string;
+  imageUrl: string;
   className?: string;
 }
 
-const LocationTag: React.FC<LocationTagProps> = ({ name, properties, className = "" }) => (
-  <div className={`flex flex-col items-stretch ${className}`}>
-    <div className="text-white">{name}</div>
-    <div className="bg-[#F8F8FF] text-[#2D7DFF] mt-1 px-4 py-0.5 rounded-[10px]">
-      {properties}
+const LocationCard: React.FC<LocationCardProps> = ({ name, properties, imageUrl, className = "" }) => (
+  <div className={`relative overflow-hidden rounded-[20px] group cursor-pointer transition-transform hover:scale-105 ${className}`}>
+    <img
+      src={imageUrl}
+      alt={`${name} city view`}
+      className="w-full h-full object-cover"
+    />
+    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+    <div className="absolute bottom-4 left-4 right-4 text-white">
+      <h3 className="text-lg font-semibold mb-1">{name}</h3>
+      <div className="bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm inline-block">
+        {properties}
+      </div>
     </div>
   </div>
 );
@@ -19,53 +28,67 @@ const LocationTag: React.FC<LocationTagProps> = ({ name, properties, className =
 export const LocationSection: React.FC = () => {
   return (
     <section className="bg-[rgba(112,101,240,1)] flex w-full flex-col overflow-hidden items-center text-xs font-normal justify-center px-20 py-[79px] max-md:max-w-full max-md:px-5">
-      <div className="flex flex-col relative min-h-[563px] w-full max-w-[1248px] rounded-[28px] bg-gray-100 max-md:max-w-full">
-        {/* Salvador - Nordeste */}
-        <div className="absolute top-[100px] left-[200px] z-10">
-          <LocationTag
-            name="Salvador"
-            properties="2 Propriedades"
-          />
-        </div>
-        
-        {/* Fernando de Noronha - Nordeste (mais ao norte) */}
-        <div className="absolute top-[80px] left-[300px] z-10">
-          <LocationTag
-            name="Fernando de Noronha"
-            properties="2 Propriedades"
-          />
-        </div>
-        
-        {/* Balneário Camboriú - Sul */}
-        <div className="absolute bottom-[150px] right-[200px] z-10">
-          <LocationTag
-            name="Balneário Camboriu"
-            properties="2 Propriedades"
-          />
-        </div>
-        
-        {/* Brasília - Centro */}
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
-          <LocationTag
-            name="Brasilia"
-            properties="2 Propriedades"
-          />
-        </div>
-        
-        {/* Florianópolis - Sul */}
-        <div className="absolute bottom-[120px] right-[150px] z-10">
-          <LocationTag
-            name="Florianópolis"
-            properties="2 Propriedades"
-          />
-        </div>
-        
-        {/* Rio de Janeiro - Sudeste */}
-        <div className="absolute bottom-[200px] left-[400px] z-10">
-          <LocationTag
-            name="Rio de Janeiro"
-            properties="2 Propriedades"
-          />
+      <div className="w-full max-w-[1248px]">
+        <div className="grid grid-cols-4 gap-4 h-[563px] max-md:grid-cols-2 max-md:h-auto">
+          {/* Salvador - Tall */}
+          <div className="col-span-1 row-span-2">
+            <LocationCard
+              name="Salvador"
+              properties="2 Propriedades"
+              imageUrl="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=400&h=600&fit=crop"
+              className="h-full"
+            />
+          </div>
+          
+          {/* Fernando de Noronha - Medium */}
+          <div className="col-span-1 row-span-1">
+            <LocationCard
+              name="Fernando de Noronha"
+              properties="2 Propriedades"
+              imageUrl="https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?w=400&h=280&fit=crop"
+              className="h-full"
+            />
+          </div>
+          
+          {/* Brasília - Wide */}
+          <div className="col-span-2 row-span-1">
+            <LocationCard
+              name="Brasília"
+              properties="2 Propriedades"
+              imageUrl="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=280&fit=crop"
+              className="h-full"
+            />
+          </div>
+          
+          {/* Rio de Janeiro - Medium */}
+          <div className="col-span-1 row-span-1">
+            <LocationCard
+              name="Rio de Janeiro"
+              properties="2 Propriedades"
+              imageUrl="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=400&h=280&fit=crop"
+              className="h-full"
+            />
+          </div>
+          
+          {/* Balneário Camboriú - Wide */}
+          <div className="col-span-2 row-span-1">
+            <LocationCard
+              name="Balneário Camboriú"
+              properties="2 Propriedades"
+              imageUrl="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&h=280&fit=crop"
+              className="h-full"
+            />
+          </div>
+          
+          {/* Florianópolis - Tall */}
+          <div className="col-span-1 row-span-2">
+            <LocationCard
+              name="Florianópolis"
+              properties="2 Propriedades"
+              imageUrl="https://images.unsplash.com/photo-1516306580123-e6e52b1b7b5f?w=400&h=600&fit=crop"
+              className="h-full"
+            />
+          </div>
         </div>
       </div>
     </section>
