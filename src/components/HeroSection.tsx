@@ -9,7 +9,7 @@ export const HeroSection: React.FC = () => {
   };
 
   return (
-    <section className="relative w-full min-h-[500px] md:min-h-[692px] mt-8 md:mt-[52px] pt-16 md:pt-[122px] pb-8 md:pb-12 px-4 md:px-8 lg:px-20 rounded-t-[12px]">
+    <section className="relative w-full min-h-[500px] md:min-h-[692px] pt-32 md:pt-40 pb-8 md:pb-12 px-4 md:px-8 lg:px-20 rounded-t-[12px]">
       <img
         src="https://cdn.builder.io/api/v1/image/assets/040fe6f248e241579615f8e023273613/f65bc982d7ba9a21703bcbe77732bbcfa243bc19?placeholderIfAbsent=true"
         alt="Hero background"

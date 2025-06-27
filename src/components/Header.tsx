@@ -10,7 +10,7 @@ export const Header: React.FC = () => {
   };
 
   return (
-    <header className="w-full px-4 md:px-8 lg:px-20 py-4 md:py-6 relative">
+    <header className="fixed top-0 left-0 right-0 w-full px-4 md:px-8 lg:px-20 py-4 md:py-6 bg-white shadow-sm z-50">
       <nav className="flex w-full items-center justify-between max-w-7xl mx-auto">
         {/* Logo */}
         <div className="flex items-center">
@@ -22,7 +22,7 @@ export const Header: React.FC = () => {
         </div>
         
         {/* Desktop Navigation */}
-        <div className="hidden lg:flex items-center gap-8 xl:gap-12 text-lg xl:text-xl font-medium">
+        <div className="hidden lg:flex items-center gap-8 xl:gap-12 text-xl xl:text-2xl font-medium">
           <a href="#" className="text-black hover:text-[#7065F0] transition-colors">
             Home
           </a>
@@ -38,7 +38,7 @@ export const Header: React.FC = () => {
         </div>
         
         {/* Desktop Right Side Actions */}
-        <div className="hidden lg:flex items-center gap-6 xl:gap-8 text-lg xl:text-xl font-medium">
+        <div className="hidden lg:flex items-center gap-6 xl:gap-8 text-xl xl:text-2xl font-medium">
           <button className="flex items-center gap-2 text-black hover:text-[#7065F0] transition-colors">
             <img
               src="https://cdn.builder.io/api/v1/image/assets/040fe6f248e241579615f8e023273613/2781467f260d3948127d5b381d6d68af509df5f9?placeholderIfAbsent=true"
@@ -59,7 +59,7 @@ export const Header: React.FC = () => {
         </div>
 
         {/* Tablet Navigation - Show some items but not all */}
-        <div className="hidden md:flex lg:hidden items-center gap-6 text-base font-medium">
+        <div className="hidden md:flex lg:hidden items-center gap-6 text-lg font-medium">
           <a href="#" className="text-black hover:text-[#7065F0] transition-colors">
             Home
           </a>
