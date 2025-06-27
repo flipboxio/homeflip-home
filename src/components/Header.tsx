@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
@@ -10,7 +9,7 @@ export const Header: React.FC = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 w-full px-4 md:px-8 lg:px-20 py-4 md:py-6 bg-white shadow-sm z-50">
+    <header className="fixed top-0 left-0 right-0 w-full px-4 md:px-8 lg:px-20 py-4 md:py-6 bg-purple-100 shadow-sm z-50">
       <nav className="flex w-full items-center justify-between max-w-7xl mx-auto">
         {/* Logo */}
         <div className="flex items-center">
@@ -97,7 +96,7 @@ export const Header: React.FC = () => {
 
       {/* Mobile/Tablet Menu */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden absolute top-full left-0 right-0 bg-white border-t border-gray-200 shadow-lg z-50">
+        <div className="lg:hidden absolute top-full left-0 right-0 bg-purple-100 border-t border-gray-200 shadow-lg z-50">
           <div className="flex flex-col px-5 py-4 space-y-4">
             {/* Mobile/Tablet Navigation Links */}
             <a href="#" className="text-lg md:text-xl text-black font-medium hover:text-[#7065F0] transition-colors py-2">
