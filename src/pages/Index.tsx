@@ -6,7 +6,6 @@ import { BenefitsSection } from '../components/BenefitsSection';
 import { PropertiesSection } from '../components/PropertiesSection';
 import { LocationSection } from '../components/LocationSection';
 import { StatsSection } from '../components/StatsSection';
-import { NewsletterSection } from '../components/NewsletterSection';
 import { Footer } from '../components/Footer';
 
 const Index: React.FC = () => {
@@ -20,7 +19,6 @@ const Index: React.FC = () => {
         <PropertiesSection />
         <LocationSection />
         <StatsSection />
-        <NewsletterSection />
       </main>
       
       <Footer />
