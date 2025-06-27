@@ -14,22 +14,7 @@ export const NewsletterSection: React.FC = () => {
   return (
     <section className="flex w-full flex-col items-center justify-center px-20 py-[62px] max-md:max-w-full max-md:px-5 max-md:py-[40px]">
       <div className="flex w-[544px] max-w-full flex-col items-stretch max-md:w-full">
-        <header className="z-10 flex flex-col items-center max-md:max-w-full">
-          <div className="text-[#7065F0] text-center text-2xl font-bold tracking-[-0.24px] max-md:text-xl">
-            Ofertas ùnicas
-          </div>
-          <div className="flex w-full flex-col items-center text-[#000929] mt-2">
-            <h2 className="text-[#000929] text-[40px] font-bold leading-[1.4] tracking-[-0.4px] max-md:text-[32px] max-md:leading-[1.3] max-md:text-center">
-              Você é um senhorio?
-            </h2>
-            <p className="text-[#000929] text-center text-base font-medium leading-[26px] opacity-50 mt-4 max-md:text-sm max-md:leading-6 max-md:max-w-full my-[29px]">
-              Descubra maneiras de aumentar o valor do seu imóvel e
-              anunciá-lo. Sem spam.
-            </p>
-          </div>
-        </header>
-        
-        <form onSubmit={handleSubmit} className="flex w-full items-stretch gap-5 flex-wrap justify-between -mt-5 px-[25px] py-4 rounded-lg max-md:flex-col max-md:gap-4 max-md:max-w-full max-md:px-5 bg-gray-200 mx-0 my-[31px]">
+        <form onSubmit={handleSubmit} className="flex w-full items-stretch gap-5 flex-wrap justify-between px-[25px] py-4 rounded-lg max-md:flex-col max-md:gap-4 max-md:max-w-full max-md:px-5 bg-gray-200">
           <input 
             type="email" 
             value={email} 
