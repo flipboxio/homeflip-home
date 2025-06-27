@@ -11,7 +11,7 @@ export const Header: React.FC = () => {
 
   return (
     <header className="w-full px-4 md:px-8 lg:px-20 py-4 md:py-6 relative">
-      <nav className="flex w-full items-center justify-between">
+      <nav className="flex w-full items-center justify-between max-w-7xl mx-auto">
         {/* Logo */}
         <div className="flex items-center">
           <img
