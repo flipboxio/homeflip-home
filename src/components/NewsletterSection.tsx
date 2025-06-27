@@ -19,7 +19,7 @@ export const NewsletterSection: React.FC = () => {
             type="email" 
             value={email} 
             onChange={e => setEmail(e.target.value)} 
-            placeholder="Digite seu endereço de e-mail" 
+            placeholder="" 
             className="text-[#000929] text-lg font-medium leading-none tracking-[-0.09px] opacity-50 my-auto bg-transparent border-none outline-none flex-1 max-md:text-base max-md:w-full max-md:mb-3" 
             required 
           />
