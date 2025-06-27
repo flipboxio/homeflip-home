@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 
@@ -21,16 +20,9 @@ export const SearchForm: React.FC<SearchFormProps> = ({ onSearch }) => {
     location: ''
   });
 
-  const [activeFilter, setActiveFilter] = useState('Alugar');
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     onSearch?.(searchData);
-  };
-
-  const handleFilterChange = (filterType: string) => {
-    setActiveFilter(filterType);
-    setSearchData(prev => ({ ...prev, type: filterType }));
   };
 
   return (
@@ -38,29 +30,9 @@ export const SearchForm: React.FC<SearchFormProps> = ({ onSearch }) => {
       <form onSubmit={handleSubmit} className="relative bg-[rgba(234,232,255,1)] shadow-[5px_5px_38px_5px_rgba(0,0,0,0.25)] w-full max-w-[1077px] mt-6 md:mt-10 p-4 md:p-[25px] rounded-[19px]">
         <div className="flex flex-col md:flex-row w-full items-stretch md:items-center gap-4 md:gap-[17px] text-base md:text-lg text-[#100A55] font-medium">
           <div className="flex gap-2 w-full md:w-auto justify-center md:justify-start">
-            <button
-              type="button"
-              onClick={() => handleFilterChange('Alugar')}
-              className={`flex-1 md:flex-none flex justify-center px-6 md:px-[50px] py-[11px] rounded-md transition-colors ${
-                activeFilter === 'Alugar'
-                  ? 'border-[color:var(--Shades-of-Purple-Purple-92,#E0DEF7)] shadow-[0px_3px_40px_0px_rgba(14,8,84,0.05)] bg-white text-[#7065F0] font-bold border-2 border-solid'
-                  : 'text-[#100A55] hover:opacity-80 bg-transparent'
-              }`}
-            >
+            <div className="flex-1 md:flex-none flex justify-center px-6 md:px-[50px] py-[11px] rounded-md border-[color:var(--Shades-of-Purple-Purple-92,#E0DEF7)] shadow-[0px_3px_40px_0px_rgba(14,8,84,0.05)] bg-white text-[#7065F0] font-bold border-2 border-solid">
               <span className="whitespace-nowrap tracking-[-0.09px] leading-none">Alugar</span>
-            </button>
-            
-            <button
-              type="button"
-              onClick={() => handleFilterChange('Mensal')}
-              className={`flex-1 md:flex-none flex items-center justify-center gap-[9px] px-4 md:px-[25px] py-[11px] rounded-md transition-colors ${
-                activeFilter === 'Mensal'
-                  ? 'border-[color:var(--Shades-of-Purple-Purple-92,#E0DEF7)] shadow-[0px_3px_40px_0px_rgba(14,8,84,0.05)] bg-white text-[#7065F0] font-bold border-2 border-solid'
-                  : 'text-[#100A55] hover:opacity-80 bg-transparent'
-              }`}
-            >
-              <span className="whitespace-nowrap tracking-[-0.09px] leading-none">Mensal</span>
-            </button>
+            </div>
           </div>
           
           <div className="border-[color:var(--Shades-of-Purple-Purple-92,#E0DEF7)] bg-[#F7F7FD] flex-1 flex items-stretch gap-4 text-sm md:text-base text-[#000929] px-4 md:px-[49px] py-4 md:py-5 rounded-lg border-2 border-solid">
