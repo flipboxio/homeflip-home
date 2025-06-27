@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { PropertyCard } from './PropertyCard';
 
@@ -81,117 +80,110 @@ export const PropertiesSection: React.FC = () => {
   ];
 
   return (
-    <section className="bg-[rgba(243,243,243,1)] flex w-full flex-col items-center mt-[86px] pt-[68px] pb-[120px] px-[72px] max-md:max-w-full max-md:mt-10 max-md:pb-[60px] max-md:px-5">
-      <header className="flex w-[544px] max-w-full flex-col items-center text-[#000929] text-center max-md:w-full">
-        <h2 className="text-[#000929] text-[40px] font-bold leading-[1.4] tracking-[-0.4px] max-md:text-[32px] max-md:leading-[1.3] max-md:max-w-full">
-          Com base na sua localização
-        </h2>
-        <p className="text-[#000929] text-base font-normal leading-[26px] opacity-70 mt-4 max-md:text-sm max-md:leading-6 max-md:max-w-full">
-          Algumas das propriedades selecionadas perto de você.
-        </p>
-      </header>
-      
-      <div className="w-full max-w-[1154px] mt-[15px] max-md:max-w-full">
-        <div className="gap-5 flex max-md:flex-col max-md:items-stretch">
-          <div className="w-[61%] max-md:w-full max-md:ml-0">
-            <div className="items-stretch border-[color:var(--Shades-of-Purple-Purple-92,#E0DEF7)] flex w-full flex-col text-lg text-[#100A55] font-medium whitespace-nowrap tracking-[-0.09px] leading-none justify-center bg-[#F0EFFB] mx-auto px-[42px] py-5 rounded-lg border-[1.5px] border-solid max-md:max-w-full max-md:mt-10 max-md:px-5">
-              <div className="flex items-center gap-[29px] max-md:flex-col max-md:gap-4 max-md:max-w-full">
+    <section className="bg-[rgba(243,243,243,1)] w-full mt-16 md:mt-[86px] pt-12 md:pt-[68px] pb-16 md:pb-[120px] px-4 md:px-8 lg:px-[72px]">
+      <div className="max-w-7xl mx-auto">
+        <header className="flex flex-col items-center text-[#000929] text-center mb-8 md:mb-[15px]">
+          <h2 className="text-2xl md:text-3xl lg:text-[40px] font-bold leading-tight lg:leading-[1.4] tracking-[-0.4px] mb-4">
+            Com base na sua localização
+          </h2>
+          <p className="text-sm md:text-base font-normal leading-relaxed lg:leading-[26px] opacity-70 max-w-md">
+            Algumas das propriedades selecionadas perto de você.
+          </p>
+        </header>
+        
+        <div className="flex flex-col lg:flex-row gap-4 lg:gap-5 mb-8 lg:mb-[35px]">
+          <div className="w-full lg:w-[61%]">
+            <div className="border-[color:var(--Shades-of-Purple-Purple-92,#E0DEF7)] flex flex-col md:flex-row items-stretch gap-4 md:gap-[29px] text-base md:text-lg text-[#100A55] font-medium whitespace-nowrap tracking-[-0.09px] leading-none bg-[#F0EFFB] p-4 md:px-[42px] md:py-5 rounded-lg border-[1.5px] border-solid">
+              <div className="flex gap-2 md:gap-[29px] w-full md:w-auto">
                 <button
                   onClick={() => setActiveFilter('Alugar')}
-                  className={`self-stretch w-[146px] my-auto rounded-[0px_0px_0px_0px] max-md:w-full ${
+                  className={`flex-1 md:w-[146px] rounded-md transition-colors ${
                     activeFilter === 'Alugar'
                       ? 'text-[#7065F0] font-bold'
                       : 'text-[#100A55]'
                   }`}
                 >
-                  <div className={`flex w-full flex-col justify-center px-[15px] py-[11px] rounded-md ${
+                  <div className={`flex justify-center px-4 md:px-[15px] py-[11px] rounded-md ${
                     activeFilter === 'Alugar'
                       ? 'border-[color:var(--Shades-of-Purple-Purple-92,#E0DEF7)] shadow-[0px_3px_40px_0px_rgba(14,8,84,0.05)] bg-white border-2 border-solid'
                       : ''
                   }`}>
-                    <div className="flex items-center gap-2 max-md:justify-center">
-                      <div className="self-stretch flex w-5 shrink-0 h-5 my-auto" />
-                      <span className="self-stretch my-auto">Alugar</span>
-                    </div>
+                    <span>Alugar</span>
                   </div>
                 </button>
                 
                 <button
                   onClick={() => setActiveFilter('Temporada')}
-                  className={`self-stretch flex flex-col justify-center w-[166px] my-auto px-[35px] py-[11px] rounded-md max-md:w-full ${
+                  className={`flex-1 md:w-[166px] rounded-md transition-colors ${
                     activeFilter === 'Temporada' 
                       ? 'text-[#7065F0] font-bold border-[color:var(--Shades-of-Purple-Purple-92,#E0DEF7)] shadow-[0px_3px_40px_0px_rgba(14,8,84,0.05)] bg-white border-2 border-solid' 
                       : 'text-[#100A55]'
                   }`}
                 >
-                  <div className="flex items-center gap-2 max-md:justify-center">
+                  <div className="flex items-center justify-center gap-2 px-4 md:px-[35px] py-[11px]">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets/040fe6f248e241579615f8e023273613/f926be56f08010d951b7fe72480c09e3b01bbc65?placeholderIfAbsent=true"
                       alt="Temporada icon"
-                      className="aspect-[1] object-contain w-5 self-stretch shrink-0 my-auto"
+                      className="aspect-[1] object-contain w-4 md:w-5 shrink-0"
                     />
-                    <span className="self-stretch my-auto">Temporada</span>
+                    <span>Temporada</span>
                   </div>
                 </button>
                 
                 <button
                   onClick={() => setActiveFilter('Mensal')}
-                  className={`self-stretch flex flex-col justify-center w-[89px] my-auto px-[15px] py-[11px] rounded-md max-md:w-full ${
+                  className={`flex-1 md:w-[89px] rounded-md transition-colors ${
                     activeFilter === 'Mensal' 
                       ? 'text-[#7065F0] font-bold border-[color:var(--Shades-of-Purple-Purple-92,#E0DEF7)] shadow-[0px_3px_40px_0px_rgba(14,8,84,0.05)] bg-white border-2 border-solid' 
                       : 'text-[#100A55]'
                   }`}
                 >
-                  <span className="self-stretch my-auto max-md:text-center">Mensal</span>
+                  <div className="flex justify-center px-4 md:px-[15px] py-[11px]">
+                    <span>Mensal</span>
+                  </div>
                 </button>
               </div>
             </div>
           </div>
           
-          <div className="w-[39%] ml-5 max-md:w-full max-md:ml-0">
-            <div className="self-stretch text-base text-[#000929] font-medium my-auto max-md:mt-4">
-              <div className="border-[color:var(--Shades-of-Purple-Purple-92,#E0DEF7)] flex w-full flex-col justify-center bg-[#F7F7FD] px-4 py-5 rounded-lg border-2 border-solid max-md:pr-5">
-                <div className="flex items-center gap-4">
+          <div className="w-full lg:w-[39%]">
+            <div className="text-sm md:text-base text-[#000929] font-medium">
+              <div className="border-[color:var(--Shades-of-Purple-Purple-92,#E0DEF7)] flex w-full bg-[#F7F7FD] px-4 py-4 md:py-5 rounded-lg border-2 border-solid">
+                <div className="flex items-center gap-4 w-full">
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets/040fe6f248e241579615f8e023273613/953e0da856bde3cf775114dc0bc6888074e90d4b?placeholderIfAbsent=true"
                     alt="Search icon"
-                    className="aspect-[1] object-contain w-6 self-stretch shrink-0 my-auto"
+                    className="aspect-[1] object-contain w-5 md:w-6 shrink-0"
                   />
                   <input
                     type="text"
                     placeholder="Pesquisar Imovel"
-                    className="text-[#000929] opacity-50 self-stretch my-auto bg-transparent border-none outline-none flex-1"
+                    className="text-[#000929] opacity-50 bg-transparent border-none outline-none flex-1 text-sm md:text-base"
                   />
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      
-      <div className="self-stretch mt-[35px] max-md:max-w-full">
-        <div className="gap-5 flex max-md:flex-col max-md:items-stretch">
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-5 mb-6">
           {properties.slice(0, 3).map((property, index) => (
-            <div key={index} className="w-[33%] max-md:w-full max-md:ml-0">
-              <PropertyCard {...property} />
-            </div>
+            <PropertyCard key={index} {...property} />
           ))}
         </div>
-      </div>
-      
-      <div className="self-stretch mt-6 max-md:max-w-full">
-        <div className="gap-5 flex max-md:flex-col max-md:items-stretch">
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-5 mb-12 md:mb-[72px]">
           {properties.slice(3, 6).map((property, index) => (
-            <div key={index + 3} className="w-[33%] max-md:w-full max-md:ml-0">
-              <PropertyCard {...property} />
-            </div>
+            <PropertyCard key={index + 3} {...property} />
           ))}
         </div>
+        
+        <div className="flex justify-center">
+          <button className="text-white bg-[rgba(94,17,119,1)] text-sm md:text-base font-bold text-center px-6 md:px-8 py-3 md:py-4 rounded-lg hover:bg-[rgba(94,17,119,0.9)] transition-colors w-full md:w-auto">
+            Ver mais Imóveis
+          </button>
+        </div>
       </div>
-      
-      <button className="text-white self-stretch bg-[rgba(94,17,119,1)] gap-2.5 overflow-hidden text-base font-bold text-center mt-[72px] -mb-6 px-8 py-4 rounded-lg max-md:mt-10 max-md:mb-2.5 max-md:px-5 max-md:w-full hover:bg-[rgba(94,17,119,0.9)] transition-colors">
-        Ver mais Imóveis
-      </button>
     </section>
   );
 };
