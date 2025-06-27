@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 
@@ -48,23 +47,6 @@ export const SearchForm: React.FC<SearchFormProps> = ({ onSearch }) => {
               }`}
             >
               <span className="whitespace-nowrap tracking-[-0.09px] leading-none max-md:text-base">Alugar</span>
-            </button>
-            
-            <button
-              type="button"
-              onClick={() => handleFilterChange('Temporada')}
-              className={`flex items-center justify-center gap-[9px] px-6 py-[11px] rounded-md max-md:px-4 max-md:flex-1 transition-colors ${
-                activeFilter === 'Temporada'
-                  ? 'border-[color:var(--Shades-of-Purple-Purple-92,#E0DEF7)] shadow-[0px_3px_40px_0px_rgba(14,8,84,0.05)] bg-white text-[#7065F0] font-bold border-2 border-solid'
-                  : 'text-[#100A55] hover:opacity-80 bg-transparent'
-              }`}
-            >
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets/040fe6f248e241579615f8e023273613/defe471ce3368bbe2703a3813c897250bb63791a?placeholderIfAbsent=true"
-                alt="Temporada icon"
-                className="aspect-[1] object-contain w-4 shrink-0 max-md:w-3"
-              />
-              <span className="whitespace-nowrap tracking-[-0.09px] leading-none max-md:text-base">Temporada</span>
             </button>
             
             <button
