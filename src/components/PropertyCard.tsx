@@ -33,7 +33,7 @@ export const PropertyCard: React.FC<PropertyCardProps> = ({
   };
 
   return (
-    <article className="w-full">
+    <article className="w-full transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl cursor-pointer">
       <img
         src={image}
         alt={title}
